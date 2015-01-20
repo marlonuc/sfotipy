@@ -1,6 +1,9 @@
+//@import "fonts.styl"
+
 //variables
 dark_gray = #333333
 light_gray = #818181
+red = #BD255B
 
 //oocss classes U
 .relative
@@ -10,12 +13,50 @@ a
 	
 .border-bottom
 	border-bottom 1px solid light_gray
+	
+.center-block
+	margin 0 auto
+	
+.center-text
+	text-align center
+	
+.right-text
+	text-align right
+	
+.padding
+	padding 1em
+	
+.padding-tb
+	padding 1em 0
+
+img
+	vertical-align top
+	
 
 //estilos
 body
 	font-family 'Varela Round', sans-serif
 	font-size 16px
-
+	
+.playing
+	&.small
+		width 20em
+		
+.actions
+	background rgba(black,.3)
+	position absolute
+	bottom 0
+	left 0
+	right 0
+	
+.action
+	color white
+	margin-right .5em
+	font-size 1.2em
+	&:last-child
+		margin-right 0
+	&.gray
+		color light_gray
 .header
 	height 3.5em
 	
@@ -26,10 +67,11 @@ body
 		line-height 3.5em
 
 .button-menu
+	color dark_gray
+	left .5em
+	margin-top -10px
 	position absolute
 	top 50%
-	margin-top -10px
-	left .5em
 
 .menu
 	display none
@@ -59,5 +101,37 @@ body
 .figure
 	margin 0
 	
-
+.progress
+	margin 1em 0 
+	position relative
+	.min 
+	.max
+		font-size .8rem
+		top -5px
+		position absolute
+	.min
+		left 0
+	.max
+		right 0
+	.total
+		background light_gray
+		border-radius 5px
+		height 5px
+		width 75%
+		margin 0 auto
+	.state
+		background red
+		border-radius 5px
+		height 5px
+		position relative
+		width 30%
+	.circle
+		background dark_gray
+		border-radius 50%
+		height 10px
+		position absolute
+		right 0
+		top -2px
+		width 10px
+		
 	
