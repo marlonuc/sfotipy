@@ -4,6 +4,7 @@
 dark_gray = #333333
 light_gray = #818181
 red = #BD255B
+lighter_gray = #E5E5E5
 
 //oocss classes U
 .relative
@@ -29,8 +30,24 @@ a
 .padding-tb
 	padding 1em 0
 
+.left
+	float left
+	
+.right
+	float right
+
+.wrap
+	width 1000px
+
+.round
+	border-radius 50%
+	overflow hidden
 img
 	vertical-align top
+	
+ul
+	margin 0
+	padding 0
 	
 
 //estilos
@@ -133,5 +150,103 @@ body
 		right 0
 		top -2px
 		width 10px
+
+.input
+	border 1px solid light_gray
+	height 2.1em
+	border-radius 5px
+	padding 0 1em 0 2em
+
+.search-icon
+	position absolute
+	left .5em
+	top .7em
+	color dark_gray
+
+.close-icon
+	position absolute
+	top .4em
+	color dark_gray
+	right .5em
+	font-size 1.2em
+
+@media screen and (min-width:480px)
+	.song
+		&:nth-child(even)
+			margin-right 1em
+	
+	.image
+		img
+			width 100%
+			height auto
+			
+	.playing
+		&.medium
+			width auto
+			
+
+@media screen and (min-width:1000px)
+
+	.body
+		background lighter_gray
+		
+	.button-menu
+		display none
+	
+	.menu
+		display block
+		background lighter_gray
+		overflow hidden
+		.item
+			float left
+			list-style none
+			
+			a
+				color dark_gray
+				text-transform uppercase
+				cursor pointer
+				padding 1em
+				display block
+				border-top 5px solid transparent
+				&:hover
+					border-top 5px solid dark_gray
+
+		
+	.header
+		height auto
+		.title
+			display none
+	
+	.isotipo
+		width 122px		
+		
+	.logo
+		padding 1.3em 0
+		overflow hidden
+		background white
+		
+	.avatar
+		width 38px
+		height 38px
+		margin-left .5em
+		
+	.username
+		color light_gray
+		position relative
+		top 9px
+		margin-left .5em
+		&:after
+			content ""
+			border-left 7px solid transparent
+			border-right 7px solid transparent
+			border-top 9px solid light_gray
+			display inline-block
+			margin-left .4em
+		
+	
+	
+			
+
+	
 		
 	
